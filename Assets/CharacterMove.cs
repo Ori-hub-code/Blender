@@ -25,11 +25,11 @@ public class CharacterMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            transform.position -= new Vector3(0, 0.1f, 0);
+            transform.position -= new Vector3(0, 0.3f, 0);
         }
         else if(Input.GetKey(KeyCode.Space)) 
         {
-            transform.position += new Vector3(0, 0.1f, 0);
+            transform.position += new Vector3(0, 0.3f, 0);
         }
     }
 
@@ -87,5 +87,11 @@ public class CharacterMove : MonoBehaviour
             isSide = false;
             sideVec = Vector3.zero;
         }
+    }
+
+    // 종료 버튼
+    public void ExitButton()
+    {
+        Application.Quit();
     }
 }
